@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monarck Studios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header>
+    <nav class="navbar">
+        <h1 class="logo">Monarck Studios</h1>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#custom">Custom Order</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h2>Luxury Art That Speaks to the Soul</h2>
+        <p>Discover exclusive paintings and premium art prints.</p>
+        <a href="#gallery" class="btn">Explore Gallery</a>
+    </div>
+</section>
+<a href="https://wa.me/256781610558?text=Hello%20Monarck%20Studios,%20I%20am%20interested%20in%20your%20artwork."
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+         alt="WhatsApp">
+</a>
+<!-- ================= FEATURED ART ================= -->
+<section class="featured">
+    <h2>Featured Artworks</h2>
+    <div class="art-container">
+
+        <div class="art-card">
+            <img src="images/work1.jpg" alt="Golden Horizon">
+            <h3>Golden Horizon</h3>
+            <p>$250</p>
+            <a href="index.html" class="btn-small">Explore More</a>
+        </div>
+
+        <div class="art-card">
+            <img src="images/work2.jpg" alt="Royal Essence">
+            <h3>Royal Essence</h3>
+            <p>$400</p>
+            <a href="index.html" class="btn-small">Explore More</a>
+        </div>
+
+        <div class="art-card">
+         <img src="images/work3.jpg" alt="Silent Thoughts">
+
+            <h3>Silent Thoughts</h3>
+            <p>$300</p>
+            <a href="index.html" class="btn-small">Explore More</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery" class="gallery">
+    <h2>Art Gallery</h2>
+ <div class="gallery-grid">
+    <img src="images/work4.jpg" alt="Artwork 4">
+    <img src="images/work5.jpg" alt="Artwork 5">
+    <img src="images/work6.jpg" alt="Artwork 6">
+    <img src="images/work7.jpg" alt="Artwork 7">
+    <img src="images/work8.jpg" alt="Artwork 8">
+    <img src="images/work9.jpg" alt="Artwork 9">
+    <img src="images/work10.jpg" alt="Artwork 10">
+</div>
+
+</section>
+
+<!-- ================= CUSTOM ORDER ================= -->
+<section id="custom" class="custom-order">
+    <h2>Request a Custom Painting or Print</h2>
+    <form id="customForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <textarea id="message" placeholder="Describe your desired artwork..." required></textarea>
+        <button type="submit" class="btn">Submit Request</button>
+    </form>
+    <p id="successMessage" style="display:none; color: gold; margin-top: 15px; font-weight: bold;">
+        Your request has been sent to WhatsApp successfully!
+    </p>
+</section>
+
+<script>
+const form = document.getElementById('customForm');
+const successMessage = document.getElementById('successMessage');
+
+// Your WhatsApp number
+const whatsappNumber = "256781610558"; // replace with your number
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Encode message for WhatsApp URL
+    const whatsappMessage = encodeURIComponent(
+        `New Custom Artwork Request:\nName: ${name}\nEmail: ${email}\nMessage: ${message}`
+    );
+
+    // WhatsApp click-to-chat URL
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, '_blank');
+
+    // Show success message
+    successMessage.style.display = 'block';
+
+    // Reset form
+    form.reset();
+
+    // Hide message after 5 seconds
+    setTimeout(() => {
+        successMessage.style.display = 'none';
+    }, 5000);
+});
+</script>
+
+
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: 
+   <a href="mailto:monarckstudios@gmail.com" class="contact-link">
+      monarckstudios@gmail.com
+   </a>
+</p>
+    <p>Phone: +256 781610558</p>
+</section>
+
+<footer>
+    <p>© 2026 Monarck Studios. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

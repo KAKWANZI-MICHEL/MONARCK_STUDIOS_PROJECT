@@ -1,0 +1,241 @@
+/* ================= GLOBAL STYLES ================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+}
+/* ================= GLOBAL STYLES ================= */
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: 
+        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+        url('https://images.unsplash.com/photo-1541961017774-22349e4a1262') center/cover no-repeat fixed;
+    color: white;
+}
+
+
+h1, h2, h3 {
+    color: gold;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: black;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: gold;
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(0,0,0,0.7)),
+    url('https://picsum.photos/1600/900?10') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn {
+    background: gold;
+    color: black;
+    padding: 12px 25px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+}
+
+/* ================= ART CARDS ================= */
+.art-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+.gallery h2 {
+    text-align: center;      /* Center the heading */
+    font-weight: bold;       /* Make it bold */
+    font-size: 2.5rem;       /* Optional: larger size for luxury feel */
+    margin-bottom: 30px;     /* Space below heading */
+    color: gold;             /* Optional: gold color for luxury theme */
+    letter-spacing: 1px;     /* Optional: subtle spacing for elegance */
+}
+
+.art-card {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.art-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.art-card:hover {
+    transform: scale(1.05);
+}
+
+.btn-small {
+    display: inline-block;
+    background: gold;
+    color: black;
+    padding: 8px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* ================= GALLERY ================= */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 40px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= FORMS ================= */
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea, select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.checkout, .custom-order, .contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .art-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ================= CONTACT LINKS ================= */
+.contact-link {
+    color: gold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* ================= FLOATING WHATSAPP ================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    background-color: #25D366;
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.7);
+}
+/* ================= FEATURED ARTWORKS HEADING ================= */
+.featured h2 {
+  text-align: center;      /* Center the heading */
+    font-weight: bold;       /* Make it bold */
+    font-size: 2.5rem;       /* Optional: larger size for luxury feel */
+    margin-bottom: 30px;     /* Space below heading */
+    color: gold;             /* Optional: gold color for luxury theme */
+    letter-spacing: 1px;  
+}
+
+/* ================= HERO CONTENT ================= */
+.hero-content h2 {
+    font-size: 3.5rem;       /* Make heading bigger */
+    font-weight: bold;        /* Bold for luxury feel */
+    color: gold;              /* Matches your theme */
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.8rem;       /* Make paragraph bigger */
+    color: #F5F2EA;          /* Soft cream for luxury look */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Optional: make button bigger in hero */
+.hero-content .btn {
+    font-size: 1.3rem;
+    padding: 15px 30px;
+}
